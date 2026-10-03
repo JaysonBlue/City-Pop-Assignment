@@ -1,1 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese City Pop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+    <header>
+        <h1>Japanese City Pop</h1>
+        <p>Take a look into the music and culture behind Japanese City Pop</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="history.html">History</a>
+        <a href="artists.html">Artists</a>
+        <a href="revival.html">Revival</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+
+        <section class="album-slideshow">
+            <h2>Browse the Collection</h2>
+
+            <div class="slideshow">
+                <button type="button" id="prev">←</button>
+
+                <div class="album">
+                    <img id="slideshow-image" src="MikiMatsubara2.jpg" alt="City Pop album cover">
+                </div>
+
+                <button type="button" id="next">→</button>
+            </div>
+        </section>
+
+        <section class="intro">
+            <h2>What Is City Pop?</h2>
+
+            <p>
+                City Pop is a genre of Japanese popular music that developed during the late 1970s and became especially popular throughout the 1980s. It blends elements of pop, jazz, funk, R&B, and other musical styles into a smooth and polished sound. The genre became closely associated with Japan's growing cities, capturing the feeling of modern life, nightlife, travel, and the optimism of the era. Many City Pop songs feature catchy melodies, layered instrumentation, and a strong emphasis on atmosphere.
+
+                Although City Pop's original popularity eventually faded, its music found a new audience decades later through the internet. Songs and albums began spreading through YouTube, streaming services, and online communities, introducing listeners around the world to artists from the genre's original era. Today, City Pop remains an influential part of Japanese music history while continuing to find new listeners outside of Japan.
+
+            </p>
+        </section>
+
+        <section class="featured">
+
+            <h2>Featured Records</h2>
+
+            <div class="records">
+
+                <article class="record">
+                    <div class="album-cover">
+                        <img src="MikiMatsubara1.jpg" alt="Pocket Park by Miki Matsubara">
+                    </div>
+                    <h3>Pocket Park</h3>
+                    <p>Miki Matsubara</p>
+                    <p>1980</p>
+                </article>
+
+                <article class="record">
+                    <div class="album-cover">
+                        <img src="Anri1.jpg" alt="Timely!! by Anri">
+                    </div>
+                    <h3>Timely!!</h3>
+                    <p>Anri</p>
+                    <p>1983</p>
+                </article>
+
+                <article class="record">
+                    <div class="album-cover">
+                        <img src="MasayoshiTakanaka1.jpg" alt="TAKANAKA by Masayoshi Takanaka">
+                    </div>
+                    <h3>TAKANAKA</h3>
+                    <p>Masayoshi Takanaka</p>
+                    <p>1980</p>
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+    <p>Created by Jayson Bluemel</p>
+    <p><a href="mailto:jbluemel@asu.edu">jbluemel@asu.edu</a></p>
+</footer>
+
+    <script>
+        const albums = [
+            "MikiMatsubara2.jpg",
+            "TaekoOhnuki1.jpg",
+            "JunkoOhashi1.jpg",
+            "toshikikadomatsu1.jpg",
+            "tomokoaran1.jpg"
+        ];
+
+        let currentAlbum = 0;
+        let slideshowTimer;
+
+        const image = document.getElementById("slideshow-image");
+
+        function showAlbum(index) {
+            currentAlbum = (index + albums.length) % albums.length;
+            image.src = albums[currentAlbum];
+        }
+
+        function resetTimer() {
+            clearInterval(slideshowTimer);
+            slideshowTimer = setInterval(() => {
+                showAlbum(currentAlbum + 1);
+            }, 5000);
+        }
+
+        document.getElementById("prev").addEventListener("click", () => {
+            showAlbum(currentAlbum - 1);
+            resetTimer();
+        });
+
+        document.getElementById("next").addEventListener("click", () => {
+            showAlbum(currentAlbum + 1);
+            resetTimer();
+        });
+
+        resetTimer();
+    </script>
+
+</body>
+</html>
