@@ -490,3 +490,68 @@ footer {
     }
 
 }
+
+.takanaka-theater {
+    width: 100%;
+    background-color: #2b211d;
+    color: #f3ebdd;
+    padding: 40px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.dvd-player {
+    max-width: 850px;
+    margin: 0 auto;
+    background-color: #171311;
+    border: 8px solid #8B6F47;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.dvd-screen {
+    background-color: #000;
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.dvd-screen video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.dvd-controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 12px 5px 2px;
+    color: #8B6F47;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.theater-caption {
+    max-width: 700px;
+    margin: 30px auto 0;
+}
+
+.theater-caption h2 {
+    margin-top: 0;
+}
+
+.theater-caption p {
+    margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+
+    .dvd-controls {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+}
