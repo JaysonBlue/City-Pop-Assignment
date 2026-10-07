@@ -6,7 +6,7 @@ body {
 
 header {
     background-color: #f3ebdd;
-    color: #2b211d;
+    color: #2b211d; 
     text-align: center;
     padding: 20px;
     margin: 20px;
@@ -419,6 +419,74 @@ footer {
 
     .revival-cards {
         flex-direction: column;
+    }
+
+}
+
+.artists-intro {
+    width: 100%;
+    background-color: #f3ebdd;
+    color: #2b211d;
+    padding: 25px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.artists-intro h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.artists-intro p {
+    margin-bottom: 0;
+}
+
+.album-gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    padding: 20px 40px;
+    box-sizing: border-box;
+}
+
+.gallery-album {
+    background-color: #f3ebdd;
+    color: #2b211d;
+    padding: 25px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.gallery-frame {
+    background-color: #2b211d;
+    border: 10px solid #8B6F47;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.gallery-frame img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-album h3 {
+    margin: 18px 0 8px;
+    font-size: 1.3rem;
+}
+
+.gallery-album p {
+    margin: 5px 0;
+}
+
+@media (max-width: 700px) {
+
+    .album-gallery {
+        grid-template-columns: 1fr;
+        padding: 20px;
     }
 
 }
